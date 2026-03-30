@@ -1,1 +1,16 @@
-{}
+{
+  "name": "ai.ops",
+  "short_name": "ai.ops",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#171717",
+  "theme_color": "#171717",
+  "description": "ai.ops — Intelligent Operations Platform",
+  "icons": [
+    {
+      "src": "/static/favicon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

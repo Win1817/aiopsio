@@ -43,7 +43,7 @@
 	let codeEditor;
 	let boilerplate = `"""
 title: Example Filter
-author: open-webui
+author: ai-ops
 author_url: https://github.com/open-webui
 funding_url: https://github.com/open-webui
 version: 0.1
@@ -112,7 +112,7 @@ class Filter:
 
 	const _boilerplate = `from pydantic import BaseModel
 from typing import Optional, Union, Generator, Iterator
-from open_webui.utils.misc import get_last_user_message
+from ai_ops.utils.misc import get_last_user_message
 
 import os
 import requests
