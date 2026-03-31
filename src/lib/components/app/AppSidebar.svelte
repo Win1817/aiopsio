@@ -29,12 +29,10 @@
 					}
 				}}
 			>
-				<img
-					src="{WEBUI_BASE_URL}/static/favicon.png"
-					class="size-11 rounded-xl p-0.5"
-					alt="ai.ops"
-					draggable="false"
-				/>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44" style="border-radius:0.75rem; background:#001428; padding:3px; flex-shrink:0;">
+					<text x="3" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">ai</text>
+					<circle cx="30" cy="26" r="3" fill="#FDB913"/>
+				</svg>
 			</button>
 		</Tooltip>
 	</div>

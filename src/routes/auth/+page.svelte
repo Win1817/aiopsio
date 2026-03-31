@@ -588,18 +588,9 @@
 
 		{#if !$config?.metadata?.auth_logo_position}
 			<div class="fixed m-10 z-50">
-				<div class="flex items-center gap-2">
-					<img
-						id="logo"
-						crossorigin="anonymous"
-						src="{WEBUI_BASE_URL}/static/favicon.png"
-						class="w-7 h-7 rounded-lg"
-						alt=""
-					/>
-					<span style="font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; line-height: 1;">
-						<span class="text-gray-900 dark:text-white">ai</span><span style="color: #FDB913;">.</span><span style="color: #004481;" class="dark:!text-[#0056a3]">ops</span>
-					</span>
-				</div>
+				<span style="font-weight: 800; font-size: 1.25rem; letter-spacing: -0.03em; line-height: 1; font-family: system-ui, -apple-system, sans-serif;">
+					<span class="text-gray-900 dark:text-white">ai</span><span style="color: #FDB913;">.</span><span style="color: #004481;" class="dark:!text-[#0056a3]">ops</span>
+				</span>
 			</div>
 		{/if}
 	{/if}
