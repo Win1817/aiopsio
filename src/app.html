@@ -121,53 +121,22 @@
 				}
 			</style>
 
-			<div
-				style="
-					position: absolute;
-					top: 33%;
-					left: 50%;
-
-					width: 24rem;
-					transform: translateX(-50%);
-
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-				"
-			>
-				<img
-					id="logo-her"
-					style="width: auto; height: 13rem"
-					src="/static/splash.png"
-					class="animate-pulse-fast"
-				/>
-
-				<div style="position: relative; width: 24rem; margin-top: 0.5rem">
-					<div
-						id="progress-background"
-						style="
-							position: absolute;
-							width: 100%;
-							height: 0.75rem;
-
-							border-radius: 9999px;
-							background-color: #fafafa9a;
-						"
-					></div>
-
-					<div
-						id="progress-bar"
-						style="
-							position: absolute;
-							width: 0%;
-							height: 0.75rem;
-							border-radius: 9999px;
-							background-color: #fff;
-						"
-						class="bg-white"
-					></div>
+			<!-- ai.ops branded splash -->
+			<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+				<div id="aiops-splash-logo" style="display: flex; align-items: center; gap: 0.5rem;">
+					<img src="/static/favicon.png" style="width: 3.5rem; height: 3.5rem; border-radius: 0.75rem;" alt="ai.ops" />
+					<span style="font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 2.8rem; letter-spacing: -0.04em; line-height: 1;">
+						<span id="splash-ai-text">ai</span><span style="color: #FDB913;">.</span><span style="color: #004481;" id="splash-ops-text">ops</span>
+					</span>
+				</div>
+				<div style="width: 8rem; height: 2px; border-radius: 9999px; background: rgba(0,68,129,0.15); overflow: hidden; position: relative;">
+					<div id="aiops-loader" style="position: absolute; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, #FDB913, #004481, transparent); animation: aiops-scan 1.4s ease-in-out infinite;"></div>
 				</div>
 			</div>
+			<!-- her mode fallback -->
+			<img id="logo-her" style="display:none; width: auto; height: 13rem; position: absolute; top: 33%; left: 50%; transform: translateX(-50%);" src="/static/splash.png" class="animate-pulse-fast" />
+			<div id="progress-background" style="display:none;"></div>
+			<div id="progress-bar" style="display:none;"></div>
 
 			<!-- <span style="position: absolute; bottom: 32px; left: 50%; margin: -36px 0 0 -36px">
 				Footer content
@@ -187,6 +156,25 @@
 
 		html.dark #splash-screen {
 			background: #000c1a;
+		}
+
+		/* Light mode splash text */
+		#splash-ai-text {
+			color: #002b52;
+		}
+
+		/* Dark mode splash text */
+		html.dark #splash-ai-text {
+			color: #f8fafc;
+		}
+
+		html.dark #splash-ops-text {
+			color: #0056a3 !important;
+		}
+
+		@keyframes aiops-scan {
+			0%   { left: -100%; }
+			100% { left: 100%; }
 		}
 
 		html.her #splash-screen {

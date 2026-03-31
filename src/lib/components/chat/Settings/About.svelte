@@ -47,10 +47,12 @@
 <div id="tab-about" class="flex flex-col h-full justify-between space-y-3 text-sm mb-6">
 	<div class=" space-y-3 overflow-y-scroll max-h-[28rem] md:max-h-full">
 		<div>
-			<div class=" mb-2.5 text-sm font-medium flex space-x-2 items-center">
-				<div>
-					{$WEBUI_NAME}
-					{$i18n.t('Version')}
+			<div class=" mb-2.5 font-medium flex space-x-2 items-center">
+				<div class="flex items-baseline gap-2">
+					<span style="font-weight: 800; font-size: 1.3rem; letter-spacing: -0.03em; line-height: 1;">
+						<span class="text-gray-900 dark:text-white">ai</span><span style="color: #FDB913;">.</span><span style="color: #004481;" class="dark:!text-[#0056a3]">ops</span>
+					</span>
+					<span class="text-sm text-gray-500 dark:text-gray-400">{$i18n.t('Version')}</span>
 				</div>
 			</div>
 			<div class="flex w-full justify-between items-center">

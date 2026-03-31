@@ -469,8 +469,10 @@ input[type='number'] {
 }
 
 .cm-editor {
-	@apply bg-white dark:bg-black;
+	@apply bg-white;
+	 background-color: #000c1a !important;
 }
+html:not(.dark) .cm-editor { background-color: #fdfdfd !important; }
 
 .tippy-box[data-theme~='dark'] {
 	@apply rounded-lg bg-gray-950 text-xs border border-gray-900 shadow-xl;
@@ -949,4 +951,73 @@ body {
 
 #note-content-container .ProseMirror {
 	padding-bottom: 2rem; /* space for the bottom toolbar */
+}
+
+
+/* ============================================================
+   ai.ops — Comprehensive Brand Color Overrides
+   Applied after all Tailwind utilities
+   ============================================================ */
+
+/* Force dark-mode body to midnight navy */
+html.dark body,
+html.dark .bg-gray-950 {
+	background-color: #000c1a !important;
+}
+
+/* Sidebar bg */
+html.dark aside,
+html.dark [data-sidebar],
+html.dark .bg-gray-900 {
+	background-color: #001428 !important;
+}
+
+/* Chat message input area */
+html.dark #chat-input,
+html.dark .chat-input-wrapper {
+	background: rgba(0, 20, 40, 0.7) !important;
+	backdoor-filter: blur(12px);
+}
+
+/* Primary action buttons → brand navy */
+html.dark .bg-black,
+html.dark button.bg-black {
+	background-color: #004481 !important;
+}
+html.dark .hover\:bg-gray-900:hover,
+html.dark button.hover\:bg-gray-900:hover {
+	background-color: #0056a3 !important;
+}
+
+/* Light mode primary action buttons */
+html:not(.dark) .dark\:bg-white.bg-black,
+html:not(.dark) button.bg-black {
+	background-color: #004481 !important;
+	color: #ffffff !important;
+}
+
+/* Accent gold for starred/active items */
+.text-yellow-500,
+.text-yellow-400 {
+	color: #FDB913 !important;
+}
+
+/* Destructive red stays consistent */
+.text-red-500,
+.dark\:text-red-400 {
+	color: #ef4444;
+}
+html.dark .text-red-500,
+html.dark .dark\:text-red-400 {
+	color: #fca5a5;
+}
+
+/* Focus rings → brand blue */
+*:focus-visible {
+	outline-color: #004481 !important;
+}
+
+/* Selection highlight → gold tint */
+::selection {
+	background: rgba(253, 185, 19, 0.25);
 }

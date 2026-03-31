@@ -67,14 +67,18 @@
 	}
 
 	input[type='checkbox'] {
-		@apply appearance-none size-3.5 align-middle bg-white border border-gray-300 rounded transition cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-800 dark:border-gray-600 self-center;
-		/* Center the custom mark */
+		@apply appearance-none size-3.5 align-middle bg-white border border-gray-300 rounded transition cursor-pointer focus:outline-none dark:bg-gray-800 dark:border-gray-600 self-center;
 		display: inline-block;
 		position: relative;
 	}
 
 	input[type='checkbox']:checked {
-		@apply bg-blue-600 border-blue-600;
+		background-color: #004481;
+		border-color: #004481;
+	}
+
+	input[type='checkbox']:focus {
+		box-shadow: 0 0 0 2px rgba(0, 68, 129, 0.35);
 	}
 
 	input[type='checkbox']:after {
