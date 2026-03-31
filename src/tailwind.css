@@ -3,18 +3,27 @@
 @config '../tailwind.config.js';
 
 @theme {
-	--color-gray-50: oklch(0.98 0 0);
-	--color-gray-100: oklch(0.94 0 0);
-	--color-gray-200: oklch(0.92 0 0);
-	--color-gray-300: oklch(0.85 0 0);
-	--color-gray-400: oklch(0.77 0 0);
-	--color-gray-500: oklch(0.69 0 0);
-	--color-gray-600: oklch(0.51 0 0);
-	--color-gray-700: oklch(0.42 0 0);
-	--color-gray-800: oklch(0.32 0 0);
-	--color-gray-850: oklch(0.27 0 0);
-	--color-gray-900: oklch(0.2 0 0);
-	--color-gray-950: oklch(0.16 0 0);
+	/* ai.ops brand: navy-tinted gray scale */
+	--color-gray-50:  oklch(0.980 0.006 240);   /* #fdfdfd light bg */
+	--color-gray-100: oklch(0.940 0.008 240);
+	--color-gray-200: oklch(0.900 0.010 240);
+	--color-gray-300: oklch(0.830 0.012 240);
+	--color-gray-400: oklch(0.720 0.014 240);
+	--color-gray-500: oklch(0.600 0.016 240);   /* #A7A9AC cool gray */
+	--color-gray-600: oklch(0.480 0.018 240);
+	--color-gray-700: oklch(0.360 0.020 240);
+	--color-gray-800: oklch(0.270 0.025 240);
+	--color-gray-850: oklch(0.210 0.030 240);
+	--color-gray-900: oklch(0.145 0.035 240);   /* near #000c1a midnight navy */
+	--color-gray-950: oklch(0.100 0.040 240);   /* #000c1a midnight navy dark */
+
+	/* ai.ops brand accent colors */
+	--color-brand-primary: #004481;
+	--color-brand-accent:  #FDB913;
+	--color-brand-bg-dark: #000c1a;
+	--color-brand-fg-dark: #f8fafc;
+	--color-brand-bg-light: #fdfdfd;
+	--color-brand-fg-light: #002b52;
 }
 
 /*

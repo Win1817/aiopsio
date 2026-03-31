@@ -1,5 +1,140 @@
 @reference "./tailwind.css";
 
+/* ============================================================
+   ai.ops — Secure Tech Brand Theme
+   Primary: #004481 (Deep Navy Blue)
+   Accent:  #FDB913 (Vibrant Gold)
+   ============================================================ */
+
+:root {
+	--aiops-primary:       #004481;
+	--aiops-primary-light: #0056a3;
+	--aiops-accent:        #FDB913;
+	--aiops-accent-muted:  rgba(253, 185, 19, 0.15);
+	--aiops-bg-light:      #fdfdfd;
+	--aiops-bg-dark:       #000c1a;
+	--aiops-fg-light:      #002b52;
+	--aiops-fg-dark:       #f8fafc;
+	--aiops-gray:          #A7A9AC;
+	--aiops-destructive:   #ef4444;
+	--aiops-glass-blur:    12px;
+	--aiops-glass-bg-light: rgba(253, 253, 253, 0.85);
+	--aiops-glass-bg-dark:  rgba(0, 12, 26, 0.85);
+}
+
+/* Light mode root background */
+html.light body,
+html:not(.dark) body {
+	background-color: var(--aiops-bg-light);
+	color: var(--aiops-fg-light);
+}
+
+/* Dark mode root background — Midnight Navy */
+html.dark body {
+	background-color: var(--aiops-bg-dark);
+	color: var(--aiops-fg-dark);
+}
+
+/* Dark mode base bg overrides */
+html.dark {
+	--color-gray-950: #000c1a;
+	--color-gray-900: #001428;
+	--color-gray-850: #001e3c;
+	--color-gray-800: #002850;
+}
+
+/* Subtle radial gradient backgrounds for depth */
+html.dark body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 0;
+	background:
+		radial-gradient(ellipse 80% 60% at 0% 0%, rgba(0, 68, 129, 0.06) 0%, transparent 60%),
+		radial-gradient(ellipse 60% 50% at 100% 100%, rgba(253, 185, 19, 0.04) 0%, transparent 60%);
+}
+
+html:not(.dark) body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 0;
+	background:
+		radial-gradient(ellipse 80% 60% at 0% 0%, rgba(0, 68, 129, 0.03) 0%, transparent 60%),
+		radial-gradient(ellipse 60% 50% at 100% 100%, rgba(253, 185, 19, 0.03) 0%, transparent 60%);
+}
+
+/* Glassmorphism sidebar */
+html.dark .sidebar {
+	background: var(--aiops-glass-bg-dark) !important;
+	backdrop-filter: blur(var(--aiops-glass-blur));
+	-webkit-backdrop-filter: blur(var(--aiops-glass-blur));
+	border-right: 1px solid rgba(0, 68, 129, 0.2);
+}
+
+html:not(.dark) .sidebar {
+	background: var(--aiops-glass-bg-light) !important;
+	backdrop-filter: blur(var(--aiops-glass-blur));
+	-webkit-backdrop-filter: blur(var(--aiops-glass-blur));
+	border-right: 1px solid rgba(0, 68, 129, 0.08);
+}
+
+/* Brand primary blue for interactive/focus elements */
+a:focus-visible,
+button:focus-visible {
+	outline-color: var(--aiops-primary);
+}
+
+/* Active/selected chat item accent */
+html.dark #sidebar-chat-item.active,
+html.dark .active-chat {
+	background: rgba(0, 68, 129, 0.25) !important;
+	border-left: 2px solid var(--aiops-accent);
+}
+
+/* Gold accent on key action buttons */
+.btn-primary,
+button[type='submit'].primary {
+	background-color: var(--aiops-primary) !important;
+	color: white !important;
+}
+
+.btn-primary:hover,
+button[type='submit'].primary:hover {
+	background-color: var(--aiops-primary-light) !important;
+}
+
+/* Sidebar brand name typography */
+#sidebar-webui-name {
+	font-weight: 700 !important;
+	letter-spacing: -0.02em !important;
+	font-size: 1.05rem !important;
+}
+
+/* Scrollbar theming */
+html.dark ::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+html.dark ::-webkit-scrollbar-track {
+	background: transparent;
+}
+html.dark ::-webkit-scrollbar-thumb {
+	background: rgba(0, 68, 129, 0.4);
+	border-radius: 999px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 86, 163, 0.6);
+}
+
+/* Selection color */
+::selection {
+	background: rgba(253, 185, 19, 0.3);
+	color: inherit;
+}
+
 @font-face {
 	font-family: 'Inter';
 	src: url('/assets/fonts/Inter-Variable.ttf');

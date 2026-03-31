@@ -1,16 +1,27 @@
 {
   "name": "ai.ops",
   "short_name": "ai.ops",
+  "description": "ai.ops — Intelligent Operations Platform",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#171717",
-  "theme_color": "#171717",
-  "description": "ai.ops — Intelligent Operations Platform",
+  "background_color": "#000c1a",
+  "theme_color": "#000c1a",
   "icons": [
     {
-      "src": "/static/favicon.png",
-      "sizes": "any",
+      "src": "/static/favicon-96x96.png",
+      "sizes": "96x96",
       "type": "image/png"
+    },
+    {
+      "src": "/static/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
     }
   ]
 }

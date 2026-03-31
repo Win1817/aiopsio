@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
+  <text x="30" y="155" font-family="system-ui, -apple-system, sans-serif"
+        font-size="140" font-weight="800" fill="#002b52" letter-spacing="-4">ai</text>
+  <circle cx="310" cy="140" r="16" fill="#FDB913"/>
+  <text x="342" y="155" font-family="system-ui, -apple-system, sans-serif"
+        font-size="140" font-weight="800" fill="#004481" letter-spacing="-4">ops</text>
+</svg>

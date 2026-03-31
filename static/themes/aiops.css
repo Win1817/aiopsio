@@ -1,0 +1,32 @@
+/* ============================================================
+   ai.ops — Secure Tech Theme
+   Deep Navy + Vibrant Gold
+   ============================================================ */
+
+.aiops * {
+	--aiops-primary: #004481;
+	--aiops-primary-light: #0056a3;
+	--aiops-accent: #FDB913;
+}
+
+/* Dark sidebar */
+.aiops .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen {
+	background: #001428;
+}
+
+.aiops #nav {
+	background-color: #001428;
+	border-right: 1px solid rgba(0, 68, 129, 0.3);
+}
+
+/* Chat area */
+.aiops .app > * {
+	background-color: #000c1a;
+}
+
+/* Input area glassmorphism */
+.aiops #chat-input-container {
+	background: rgba(0, 20, 40, 0.8);
+	backdrop-filter: blur(12px);
+	border-top: 1px solid rgba(0, 68, 129, 0.2);
+}

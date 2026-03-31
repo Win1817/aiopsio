@@ -76,7 +76,7 @@
 				? ' -mt-1'
 				: 'text-center items-center justify-center'}  self-start text-gray-600 dark:text-gray-400"
 		>
-			{$WEBUI_NAME} ‧ v{WEBUI_VERSION}
+			<span style="font-weight: 800; letter-spacing: -0.03em;">ai<span style="color: #FDB913;">.</span><span style="color: #004481;" class="dark:!text-[#0056a3]">ops</span></span> <span class="opacity-50">‧ v{WEBUI_VERSION}</span>
 		</div>
 	{/if}
 </div>

@@ -917,9 +917,10 @@
 				<a href="/" class="flex flex-1 px-1.5" on:click={newChatHandler}>
 					<div
 						id="sidebar-webui-name"
-						class=" self-center font-medium text-gray-850 dark:text-white font-primary"
+						class="self-center font-primary select-none"
+						style="font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; line-height: 1;"
 					>
-						{$WEBUI_NAME}
+						<span class="text-gray-900 dark:text-white">ai</span><span style="color: #FDB913;">.</span><span style="color: #004481;" class="dark:!text-[#0056a3]">ops</span>
 					</div>
 				</a>
 				<Tooltip
